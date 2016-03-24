@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/A786391/.docker'
+let g:netrw_dirhist_2='/Users/A786391/.docker/machine'
+let g:netrw_dirhist_3='/Users/A786391/.docker/machine/machines'
+let g:netrw_dirhist_4='/Users/A786391/.docker/machine/machines/dev'
+let g:netrw_dirhist_5='/Users/A786391/.vim'
+let g:netrw_dirhist_6='/Users/A786391/dev/mc-web/app'
+let g:netrw_dirhist_7='/Users/A786391/dev/mc-web/app/modules/account/my_profile'
