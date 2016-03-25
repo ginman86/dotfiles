@@ -113,3 +113,6 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
+
+# colors in GCC; this could be done with an alias that adds -fdiagnostics-color=auto, but older versions of gcc don't support it
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
