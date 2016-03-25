@@ -45,7 +45,7 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-
+#colors aren't distracting, they improve contrast and make things easier to read.
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
     # We have color support; assume it's compliant with Ecma-48
     # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
@@ -81,6 +81,11 @@ CBB="\e[44m" # background blue
 CBM="\e[45m" # background magenta
 CBC="\e[46m" # background cyan
 CBW="\e[47m" # background white
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
 
 if [ "$color_prompt" = yes ]; then
     #print date/time and fill line with '='
