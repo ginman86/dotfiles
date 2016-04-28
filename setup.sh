@@ -11,6 +11,7 @@ if [[ "$unamestr" == 'Darwin' ]]; then
   brew install CMake
   brew install tmux
   brew install macvim --override-system-vim
+  brew install node
   brew linkapps
 fi
 
@@ -20,6 +21,7 @@ vim +PluginInstall +qall
 if [[ "$unamestr" == 'Darwin' ]]; then
   ~/.vim/bundle/YouCompleteMe/install.py  
 fi
+npm install -g standard
 
 # Run symlinks
 . link.sh

@@ -58,9 +58,13 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Syntastic settings
+let g:syntastic_javascript_checkers = ['standard']
+
 """""""""""""""""
 " NERDTRee settings
 """""""""""""""""
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>a :NERDTreeFind<cr>
 let NERDTreeIgnore=['\.DS_Store$']
