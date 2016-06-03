@@ -12,6 +12,7 @@ if [[ "$unamestr" == 'Darwin' ]]; then
   brew install tmux
   brew install macvim --override-system-vim
   brew install node
+  brew install kdiff3
   brew linkapps
 fi
 
@@ -26,4 +27,4 @@ npm install -g standard
 # Run symlinks
 . link.sh
 
-
+git config --add merge.tool kdiff3
