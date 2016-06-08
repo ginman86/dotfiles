@@ -20,6 +20,9 @@ set path=.,/usr/include,,**
 " Allows yank to pbcopy
 set clipboard=unnamed
 
+" Set mapleader to spacebar
+let mapleader = "\<Space>"
+
 " set the runtime path to include Plugin and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -42,6 +45,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,6 +64,16 @@ filetype plugin indent on    " required
 
 " Syntastic settings
 let g:syntastic_javascript_checkers = ['standard']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_html_tidy_exec = 'tidy5'
 
 """""""""""""""""
 " NERDTRee settings
