@@ -1,0 +1,12 @@
+# default setup
+new -s Work -n Main
+split-window -h
+selectp -t 0
+split-window -h
+selectp -t 2
+split-window -v
+cd ~/dev/mc-web
+split-window -h
+selectp -t 3
+make server-caching-proxy
+

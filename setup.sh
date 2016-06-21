@@ -27,4 +27,7 @@ npm install -g standard
 # Run symlinks
 . link.sh
 
+# Create swp file directory
+mkdir ~/.vim/swapfiles
+
 git config --add merge.tool kdiff3

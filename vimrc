@@ -17,8 +17,14 @@ set incsearch         " incremental searching
 
 set path=.,/usr/include,,**
 
+" Save .swp/.swo files to a dif directory
+set directory=$HOME/.vim/swapfiles//
+
 " Allows yank to pbcopy
 set clipboard=unnamed
+
+" Enable mouse lol
+set mouse=a
 
 " Set mapleader to spacebar
 let mapleader = "\<Space>"
