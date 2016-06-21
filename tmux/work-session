@@ -1,12 +1,10 @@
 # default setup
-new -s Work -n Main
-split-window -h
+neww -n Work -c ~/dev/mc-web
+split-window -h -c "#{pane_current_path}"
 selectp -t 0
-split-window -h
+split-window -h -c "#{pane_current_path}"
 selectp -t 2
-split-window -v
-cd ~/dev/mc-web
-split-window -h
+split-window -v -c "#{pane_current_path}"
+send-keys "make server-caching-proxy" C-m
+split-window -h -c "#{pane_current_path}"
 selectp -t 3
-make server-caching-proxy
-
