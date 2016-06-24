@@ -1,0 +1,6 @@
+# A general session for working - 3 vertical windows starting in the /dev directory
+neww -n General -c ~/dev
+split-window -v -c "#{pane_current_path}"
+split-window -h -c "#{pane_current_path}"
+selectp -t 0
+split-window -h -c "#{pane_current_path}"
