@@ -27,3 +27,7 @@ for al in `__git_aliases`; do
     complete_func=_git_$(__git_aliased_command $al)
     function_exists $complete_fnc && __git_complete g$al $complete_func
 done
+
+function iterm2_print_user_vars() {
+  iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
+}
