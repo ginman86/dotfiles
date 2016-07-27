@@ -1,10 +1,38 @@
 # default setup
 neww -n Work -c ~/dev/mc-web
+send-keys "vim" C-m
+
+# top right window
+# -------------
+# |  |  |  X  |
+# |  |  |------
+# |  |  |  |  |
+# -------------
 split-window -h -c "#{pane_current_path}"
+send-keys ". ~/dotfiles/scripts/aetna.sh" C-m
+
+# -------------
+# |  |  |     |
+# |  |XX|------
+# |  |  |  |  |
+# -------------
 selectp -t 0
 split-window -h -c "#{pane_current_path}"
+send-keys "vim" C-m
+
+# -------------
+# |  |  |     |
+# |  |  |------
+# |  |  |XX|  |
+# -------------
 selectp -t 2
 split-window -v -c "#{pane_current_path}"
 send-keys "make server-caching-proxy" C-m
+
+# -------------
+# |  |  |     |
+# |  |  |------
+# |  |  |  |XX|
+# -------------
 split-window -h -c "#{pane_current_path}"
 selectp -t 3
