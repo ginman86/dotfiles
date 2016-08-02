@@ -1,0 +1,53 @@
+[user]
+	email = ginman86@gmail.com
+	name = Greg Inman
+[core]
+	excludesfile = /Users/A786391/.gitignore
+	editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = 
+	trustExitCode = true
+[alias]
+  # one-line log
+  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+  a = add
+  ap = add -p
+  c = commit --verbose
+  ca = commit -a --verbose
+  cm = commit -m
+  cam = commit -a -m
+  m = commit --amend --verbose
+  st = stage .
+
+  d = diff
+  ds = diff --stat
+  dc = diff --cached
+
+  s = status -s
+  co = checkout
+  cob = checkout -b
+  # list branches sorted by last modified
+  b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+  # list aliases
+  la = "!git config -l | grep alias | cut -c 7-"
+
+  po = !echo 'Ah push it...' && git push origin && echo 'push it real good'
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+

@@ -20,12 +20,17 @@ fi
 vim +PluginInstall +qall
 
 if [[ "$unamestr" == 'Darwin' ]]; then
-  ~/.vim/bundle/YouCompleteMe/install.py  
+  ~/.vim/bundle/YouCompleteMe/install.py
 fi
 npm install -g standard
 
 # Run symlinks
 . link.sh
+
+# Permissions for dotfiles
+chmod +x ~/imgls
+chmod +x ~/dotfiles/imgls
+alias imgls='~/.imgls'
 
 # Create swp file directory
 mkdir ~/.vim/swapfiles

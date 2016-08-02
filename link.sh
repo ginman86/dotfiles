@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim tmux tmux.conf" 	  # list of files/folders to symlink in homedir
+files="bashrc vimrc vim tmux tmux.conf imgls gitconfig" 	  # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,3 +29,10 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+for script in ./scripts; do
+  echo 'Creating symlink for $script in /usr/bin/'
+  ln -s ./scripts/$script /usr/bin/$script
+done
+
+
