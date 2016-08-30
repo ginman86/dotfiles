@@ -22,12 +22,14 @@
   cam = commit -a -m
   m = commit --amend --verbose
   st = stage .
+  pu = pull origin
 
   d = diff
   ds = diff --stat
   dc = diff --cached
 
   s = status -s
+  f = fetch
   co = checkout
   cob = checkout -b
   # list branches sorted by last modified

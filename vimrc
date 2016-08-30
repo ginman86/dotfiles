@@ -89,3 +89,7 @@ let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>a :NERDTreeFind<cr>
 let NERDTreeIgnore=['\.DS_Store$']
+
+" json formatting
+nmap =j :%!python -m json.tool<CR>
+
