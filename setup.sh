@@ -13,6 +13,7 @@ if [[ "$unamestr" == 'Darwin' ]]; then
   brew install macvim --override-system-vim
   brew install node
   brew install kdiff3
+  brew install the_silver_searcher
   brew linkapps
 fi
 
