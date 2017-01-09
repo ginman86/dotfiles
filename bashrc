@@ -9,6 +9,9 @@ export GOPATH=$HOME/Go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:'~/bin'
+
+export AWS_DEFAULT_PROFILE="soke"
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
@@ -31,3 +34,5 @@ done
 function iterm2_print_user_vars() {
   iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
 }
+
+exec `defaults write NSGlobalDomain KeyRepeat -int 0`
