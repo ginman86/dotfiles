@@ -8,6 +8,7 @@ set colorcolumn=100
 set number
 syntax enable
 
+set foldmethod=indent
 set ignorecase        " Makes search case-insensitive
 set smartcase         " Makes caps required
 color jellybeans
