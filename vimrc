@@ -8,6 +8,16 @@ set colorcolumn=100
 set number
 syntax enable
 
+" devicons
+let g:webdevicons_enable=1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_statusline = 1
+set encoding=utf8
+set guifont=DroidSansMonoForPowerline\ Nerd\ Font:h11
+
+" jsx
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 set foldmethod=indent
 set ignorecase        " Makes search case-insensitive
 set smartcase         " Makes caps required
@@ -55,6 +65,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'mattn/emmet-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'vimwiki/vimwiki'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
