@@ -14,6 +14,7 @@ if [[ "$unamestr" == 'Darwin' ]]; then
   brew install node
   brew install kdiff3
   brew install the_silver_searcher
+  brew install bash_completion
   brew linkapps
 fi
 

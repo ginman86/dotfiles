@@ -5,7 +5,7 @@ source /usr/local/opt/nvm/nvm.sh
 PATH=$PATH:~/Downloads/apache-maven-3.3.3/bin
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 
-export GOPATH=$HOME/Go
+export GOPATH=$HOME/dev/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
@@ -16,8 +16,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-export AWS_DEFAULT_PROFILE="soke"
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
