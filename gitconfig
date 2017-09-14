@@ -1,6 +1,6 @@
 [user]
 	email = ginman86@gmail.com
-	name = Greg Inman
+	name = Greg
 [core]
 	excludesfile = /Users/A786391/.gitignore
 	editor = /usr/bin/vim

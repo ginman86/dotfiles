@@ -6,10 +6,7 @@ PATH=$PATH:~/Downloads/apache-maven-3.3.3/bin
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 
 export GOPATH=$HOME/dev/go
-export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:'~/bin'
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
