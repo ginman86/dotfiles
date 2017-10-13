@@ -53,3 +53,5 @@
 [diff]
 	tool = Kaleidoscope
 
+[fetch]
+	prune = true
