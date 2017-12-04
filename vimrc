@@ -53,7 +53,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 
 Plugin 'tpope/vim-surround'
-Plugin 'easymotion/vim-easymotion' 
+Plugin 'easymotion/vim-easymotion'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -69,6 +69,13 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'vimwiki/vimwiki'
 Plugin 'mxw/vim-jsx'
+Plugin 'fatih/vim-go'
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+"
+" " Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -108,4 +115,15 @@ let NERDTreeIgnore=['\.DS_Store$']
 
 " json formatting
 nmap =j :%!python -m json.tool<CR>
+
+" UltiSnip settings
+"
+" " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<C-w>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 

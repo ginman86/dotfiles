@@ -25,10 +25,15 @@ function_exists() {
     return $?
 }
 
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-    . /usr/share/bash-completion/completions/git
+if [ -f ~/dotfiles/.git-completion.bash ]; then
+  . ~/dotfiles/.git-completion.bash
 fi
+
+# old bash completion
+#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+#   . /etc/bash_completion
+#   . /usr/share/bash-completion/completions/git
+#fi
 
 for al in `__git_aliases`; do
     alias g$al="git $al"

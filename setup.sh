@@ -25,6 +25,7 @@ if [[ "$unamestr" == 'Darwin' ]]; then
   ~/.vim/bundle/YouCompleteMe/install.py
 fi
 npm install -g standard
+npm install -g tldr
 
 # Run symlinks
 . link.sh
@@ -36,5 +37,8 @@ alias imgls='~/.imgls'
 
 # Create swp file directory
 mkdir ~/.vim/swapfiles
+
+# git auto complete
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ./.git-completion.bash
 
 git config --add merge.tool kdiff3
