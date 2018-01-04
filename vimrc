@@ -70,6 +70,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'vimwiki/vimwiki'
 Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
+Plugin 'hashivim/vim-terraform'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
@@ -126,4 +127,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+" golang
+let g:go_version_warning = 0
 

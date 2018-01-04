@@ -38,7 +38,7 @@
   # list aliases
   la = "!git config -l | grep alias | cut -c 7-"
 
-  po = !echo 'Ah push it...' && git push origin && echo 'push it real good'
+  po = !echo 'Ah push it...' && git push -u && echo 'push it real good'
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
@@ -55,3 +55,5 @@
 
 [fetch]
 	prune = true
+[push]
+  default = current

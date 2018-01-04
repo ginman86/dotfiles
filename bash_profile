@@ -1,5 +1,4 @@
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 source /usr/local/opt/nvm/nvm.sh
 
 PATH=$PATH:~/Downloads/apache-maven-3.3.3/bin
@@ -28,12 +27,6 @@ function_exists() {
 if [ -f ~/dotfiles/.git-completion.bash ]; then
   . ~/dotfiles/.git-completion.bash
 fi
-
-# old bash completion
-#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-#   . /etc/bash_completion
-#   . /usr/share/bash-completion/completions/git
-#fi
 
 for al in `__git_aliases`; do
     alias g$al="git $al"

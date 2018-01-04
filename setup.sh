@@ -7,11 +7,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim/bundle/Vund
 # Install homebrew if OSX
 unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
+  defaults write com.apple.finder AppleShowAllFiles YES
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install CMake
   brew install tmux
   brew install macvim --override-system-vim
   brew install node
+  brew install yarn --without-node
   brew install kdiff3
   brew install the_silver_searcher
   brew install bash_completion
