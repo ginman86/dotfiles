@@ -1,5 +1,6 @@
 export NVM_DIR=~/.nvm
 source /usr/local/opt/nvm/nvm.sh
+nvm use 6
 
 PATH=$PATH:~/Downloads/apache-maven-3.3.3/bin
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
