@@ -40,6 +40,8 @@ function iterm2_print_user_vars() {
   iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
 }
 
+. ~/dotfiles/scripts/zerocard.sh
+
 exec `defaults write NSGlobalDomain KeyRepeat -int 0`
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
