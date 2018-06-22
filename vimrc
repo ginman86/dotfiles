@@ -15,8 +15,14 @@ let g:webdevicons_enable_airline_statusline = 1
 set encoding=utf8
 set guifont=DroidSansMonoForPowerline\ Nerd\ Font:h11
 
-" jsx
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+" ALE
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+let g:airline#extensions#ale#enabled = 1
+let g:ale_open_list = 1
 
 set foldmethod=indent
 set ignorecase        " Makes search case-insensitive
@@ -57,7 +63,6 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'pangloss/vim-javascript'
@@ -71,6 +76,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
 Plugin 'hashivim/vim-terraform'
+Plugin 'w0rp/ale'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
@@ -93,18 +99,18 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" Syntastic settings
-let g:syntastic_javascript_checkers = ['standard']
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" "Syntastic settings
+"let g:syntastic_javascript_checkers = ['standard']
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"" let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
-let g:syntastic_html_tidy_exec = 'tidy5'
+"let g:syntastic_html_tidy_exec = 'tidy5'
 
 """""""""""""""""
 " NERDTRee settings

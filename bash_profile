@@ -36,6 +36,9 @@ for al in `__git_aliases`; do
     function_exists $complete_fnc && __git_complete g$al $complete_func
 done
 
+set editing-mode vi
+set keymap vi
+
 function iterm2_print_user_vars() {
   iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
 }
