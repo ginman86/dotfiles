@@ -4,21 +4,31 @@
 # Install Vundle to ~/dotfiles
 git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim/bundle/Vundle.vim
 
+
+
 # Install homebrew if OSX
 unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
+  sudo chown -R $(whoami) /usr/local/Frameworks
+  sudo chown -R $(whoami) /usr/local/Cellar
   defaults write com.apple.finder AppleShowAllFiles YES
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install CMake
   brew install tmux
   brew install macvim --override-system-vim
+  brew install nvm
   brew install node
   brew install yarn --without-node
   brew install kdiff3
   brew install the_silver_searcher
   brew install bash_completion
+  brew install lynx
+  brew install pandoc
   brew linkapps
 fi
+
+# nvm setup
+mkdir ~/.nvm
 
 # Install vim plugins
 vim +PluginInstall +qall

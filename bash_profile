@@ -1,6 +1,6 @@
 export NVM_DIR=~/.nvm
-source /usr/local/opt/nvm/nvm.sh
-nvm use 6
+. "$(brew --prefix nvm)/nvm.sh"
+nvm use 9
 
 PATH=$PATH:~/Downloads/apache-maven-3.3.3/bin
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
@@ -25,6 +25,10 @@ function_exists() {
     return $?
 }
 
+mrkd () {
+  pandoc $1 | lynx -stdin
+}
+
 if [ -f ~/dotfiles/.git-completion.bash ]; then
   . ~/dotfiles/.git-completion.bash
 fi
@@ -45,7 +49,7 @@ function iterm2_print_user_vars() {
 
 . ~/dotfiles/scripts/zerocard.sh
 
-exec `defaults write NSGlobalDomain KeyRepeat -int 0`
+exec `defaults write NSGlobalDomain KeyRepeat -int 1`
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

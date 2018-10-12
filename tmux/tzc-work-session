@@ -1,0 +1,40 @@
+# default setup
+neww -n Work -c ~/dev/work/webadmin
+send-keys "vim" C-m
+
+# top right window
+# -------------
+# |  |  |  X  |
+# |  |  |------
+# |  |  |  |  |
+# -------------
+split-window -h -c "#{pane_current_path}"
+send-keys ". ~/dotfiles/scripts/zc.sh" C-m
+
+# -------------
+# |  |  |     |
+# |  |XX|------
+# |  |  |  |  |
+# -------------
+selectp -t 0
+split-window -h -c "#{pane_current_path}"
+send-keys "vim" C-m
+
+# -------------
+# |  |  |     |
+# |  |  |------
+# |  |  |XX|  |
+# -------------
+selectp -t 2
+split-window -v -c "#{pane_current_path}"
+send-keys ". ~/dotfiles/scripts/zc_api.sh" C-m
+
+# -------------
+# |  |  |     |
+# |  |  |------
+# |  |  |  |XX|
+# -------------
+split-window -h -c "#{pane_current_path}"
+send-keys ". ~/dotfiles/scripts/zc_admin.sh" C-m
+selectp -t 3
+
