@@ -17,6 +17,9 @@ set guifont=DroidSansMonoForPowerline\ Nerd\ Font:h11
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
+" Neocomplete on start
+let g:neocomplete#enable_at_startup = 1
+
 " ALE
 let g:ale_linters = {
 \   'javascript': ['standard'],
@@ -66,7 +69,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'pangloss/vim-javascript'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/neocomplete'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'mattn/emmet-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
