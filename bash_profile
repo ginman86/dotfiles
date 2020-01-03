@@ -1,12 +1,11 @@
 export NVM_DIR=~/.nvm
 . "$(brew --prefix nvm)/nvm.sh"
-nvm use 9
+nvm use --lts
 
+PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:~/Downloads/apache-maven-3.3.3/bin
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 
-export GOPATH=$HOME/dev/go
-export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

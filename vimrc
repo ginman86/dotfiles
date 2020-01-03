@@ -12,8 +12,10 @@ syntax enable
 let g:webdevicons_enable=1
 let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_enable_airline_statusline = 1
+let g:airline_powerline_fonts = 1
 set encoding=utf8
-set guifont=DroidSansMonoForPowerline\ Nerd\ Font:h11
+set guifont=Fira\ Code:h12
+"set guifont=Hack\ Regular\ Nerd\ Font\ Complete:h11
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
@@ -37,6 +39,9 @@ set incsearch         " incremental searching
 
 set path=.,/usr/include,,**
 
+" Ctrl p ignore
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " Save .swp/.swo files to a dif directory
 set directory=$HOME/.vim/swapfiles//
 
@@ -45,6 +50,9 @@ set clipboard=unnamed
 
 " Enable mouse lol
 set mouse=a
+
+" gently highlights the line the main cursor is on
+set cursorline
 
 " Set mapleader to spacebar
 let mapleader = "\<Space>"
@@ -69,17 +77,18 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'pangloss/vim-javascript'
-Plugin 'Shougo/neocomplete'
+"Plugin 'Shougo/neocomplete'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'mattn/emmet-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'vimwiki/vimwiki'
 Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
 Plugin 'hashivim/vim-terraform'
 Plugin 'w0rp/ale'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'ryanoasis/vim-devicons'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
