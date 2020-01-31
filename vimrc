@@ -57,47 +57,40 @@ set cursorline
 " Set mapleader to spacebar
 let mapleader = "\<Space>"
 
-" set the runtime path to include Plugin and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Plugin should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin()
+" alternatively, pass a path where Plug should install plugins
+"call plug('~/some/path/here')
 
-" let Plugin manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-
-Plugin 'tpope/vim-surround'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'pangloss/vim-javascript'
-"Plugin 'Shougo/neocomplete'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'mattn/emmet-vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'vimwiki/vimwiki'
-Plugin 'mxw/vim-jsx'
-Plugin 'fatih/vim-go'
-Plugin 'hashivim/vim-terraform'
-Plugin 'w0rp/ale'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+"Plun 'Shougo/neocomplete'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'mattn/emmet-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'vimwiki/vimwiki'
+Plug 'mxw/vim-jsx'
+Plug 'fatih/vim-go'
+Plug 'hashivim/vim-terraform'
+Plug 'w0rp/ale'
+Plug 'leafgarland/typescript-vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Track the engine.
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 "
 " " Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on

@@ -1,8 +1,12 @@
 # Run this once on a completely new machine to setup teh goodies.
 # . setup.sh
 
+# Install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # Install Vundle to ~/dotfiles
-git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim/bundle/Vundle.vim
+# git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim/bundle/Vundle.vim
 
 # Install homebrew if OSX
 unamestr=`uname`
