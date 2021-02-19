@@ -13,6 +13,8 @@ unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
   sudo chown -R $(whoami) /usr/local/Frameworks
   sudo chown -R $(whoami) /usr/local/Cellar
+  sudo chmod +x ~/dotfiles/scripts/rebindkeys.sh
+  sudo defaults write com.apple.loginwindow LoginHook ~/dotfiles/scripts/rebindkeys.sh
   defaults write com.apple.finder AppleShowAllFiles YES
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install CMake
